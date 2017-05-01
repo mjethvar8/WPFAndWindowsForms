@@ -34,7 +34,7 @@ namespace WpfApplication1
             else
             {
                 RadioButton2.IsChecked = true;
-                MessageBox.Show("Goodbye.");
+                MessageBox.Show("Goodbye. ");
             }
         }
     }

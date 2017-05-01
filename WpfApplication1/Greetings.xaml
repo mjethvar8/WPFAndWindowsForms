@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
-        Title="Greetings" Height="350" Width="525">
+        Title="Greetings" Height="425" Width="625">
     <Grid>
-        <TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" RenderTransformOrigin="4.08,2.312" Margin="100,62,93,241" Text="Select a message option and then choose the display button. " Width="324" />
-        <RadioButton x:Name="RadioButton1" Content="Hello" HorizontalAlignment="Left" Margin="139,111,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="RadioButton2" Content="Goodbye" HorizontalAlignment="Left" Margin="304,111,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Display" HorizontalAlignment="Left" Margin="216,154,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.038,-0.389" Click="button_Click"/>
+        <TextBlock TextWrapping="Wrap" VerticalAlignment="Bottom" RenderTransformOrigin="4.08,2.312" Margin="0,0,142,316" Width="336" Height="26" HorizontalAlignment="Right" Text="   Select a message option and then choose the Display button."/>
+        <RadioButton x:Name="RadioButton1" Content="Hello" HorizontalAlignment="Left" Margin="177,111,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RadioButton2" Content="Goodbye" HorizontalAlignment="Left" Margin="342,111,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="button" Content="Display" HorizontalAlignment="Left" Margin="254,154,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.038,-0.389" Click="button_Click"/>
 
     </Grid>
 </Window>
