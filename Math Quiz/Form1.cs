@@ -26,6 +26,15 @@ namespace Math_Quiz
         int minuend;
         int subtrahend;
 
+        // these integer variables store the numbers
+        // forn the multiplication problem
+        int multiplicand;
+        int multiplier;
+
+        // these integer variables store the numbers
+        // for the divison problem
+        int dividend;
+        int divisor;
 
         // this int variable keeps track of the 
         // remaining time.
@@ -63,6 +72,21 @@ namespace Math_Quiz
             minusLeftLabel.Text = minuend.ToString();
             minusRightLabel.Text = subtrahend.ToString();
             difference.Value = 0;
+
+            // fill in the multiplication problem.
+            multiplicand = randomizer.Next(2, 11);
+            multiplier = randomizer.Next(2, 11);
+            timesLeftLabel.Text = multiplicand.ToString();
+            timesRightLabel.Text = multiplier.ToString();
+            product.Value = 0;
+
+            // fill in the divison problem
+            divisor = randomizer.Next(2, 11);
+            int temporaryQuotient = randomizer.Next(2, 11);
+            dividend = divisor * temporaryQuotient;
+            dividedLeftLabel.Text = dividend.ToString();
+            dividedRightLabel.Text = divisor.ToString();
+            quotient.Value = 0;
 
             // start the timer
             timeLeft = 30;
@@ -105,6 +129,8 @@ namespace Math_Quiz
                 MessageBox.Show("You didn't finish in time.", "Sorry!");
                 sum.Value = addend1 + addend2;
                 difference.Value = minuend - subtrahend;
+                product.Value = multiplicand * multiplier;
+                quotient.Value = dividend / divisor;
                 startButton.Enabled = true;
             }
         }
@@ -115,7 +141,8 @@ namespace Math_Quiz
         /// <returns></returns>
         private bool CheckTheAnswer()
         {
-            if((addend1 + addend2 == sum.Value) && (minuend -  subtrahend == difference.Value) )
+            if((addend1 + addend2 == sum.Value) && (minuend -  subtrahend == difference.Value) && (multiplicand * multiplier ==  product.Value) &&
+                (dividend / divisor == quotient.Value))
             {
                 return true;
             }
