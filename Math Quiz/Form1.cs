@@ -21,6 +21,12 @@ namespace Math_Quiz
         int addend1;
         int addend2;
 
+        // these integer variables store the numbers
+        // for the subtraction problem.
+        int minuend;
+        int subtrahend;
+
+
         // this int variable keeps track of the 
         // remaining time.
         int timeLeft;
@@ -50,6 +56,13 @@ namespace Math_Quiz
             // this step makes sure its value is zero before
             // adding any values to it.
             sum.Value = 0;
+
+            // fill in the subtraction problem.
+            minuend = randomizer.Next(1, 10);
+            subtrahend = randomizer.Next(1, minuend);
+            minusLeftLabel.Text = minuend.ToString();
+            minusRightLabel.Text = subtrahend.ToString();
+            difference.Value = 0;
 
             // start the timer
             timeLeft = 30;
@@ -91,6 +104,7 @@ namespace Math_Quiz
                 timeLabel.Text = "Time's up!";
                 MessageBox.Show("You didn't finish in time.", "Sorry!");
                 sum.Value = addend1 + addend2;
+                difference.Value = minuend - subtrahend;
                 startButton.Enabled = true;
             }
         }
@@ -101,13 +115,25 @@ namespace Math_Quiz
         /// <returns></returns>
         private bool CheckTheAnswer()
         {
-            if(addend1 + addend2 == sum.Value)
+            if((addend1 + addend2 == sum.Value) && (minuend -  subtrahend == difference.Value) )
             {
                 return true;
             }
             else
             {
                 return false;
+            }
+        }
+
+        private void answer_Enter(object sender, EventArgs e)
+        {
+            // select the whole answer in the numericupdown control.
+            NumericUpDown answerBox = sender as NumericUpDown;
+
+            if (answerBox != null)
+            {
+                int lengthofanswer = answerBox.Value.ToString().Length;
+                answerBox.Select(0, lengthofanswer);
             }
         }
     }
