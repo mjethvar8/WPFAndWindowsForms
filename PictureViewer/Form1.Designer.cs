@@ -32,10 +32,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.showButton = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.backgroundButton = new System.Windows.Forms.Button();
+            this.closeButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -57,6 +57,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(534, 311);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // pictureBox1
             // 
@@ -81,55 +82,55 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.button1);
-            this.flowLayoutPanel1.Controls.Add(this.button2);
-            this.flowLayoutPanel1.Controls.Add(this.button3);
-            this.flowLayoutPanel1.Controls.Add(this.button4);
+            this.flowLayoutPanel1.Controls.Add(this.showButton);
+            this.flowLayoutPanel1.Controls.Add(this.clearButton);
+            this.flowLayoutPanel1.Controls.Add(this.backgroundButton);
+            this.flowLayoutPanel1.Controls.Add(this.closeButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(83, 282);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(448, 26);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
-            // button1
+            // showButton
             // 
-            this.button1.AutoSize = true;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(93, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Show a picture";
-            this.button1.UseVisualStyleBackColor = true;
+            this.showButton.AutoSize = true;
+            this.showButton.Location = new System.Drawing.Point(3, 3);
+            this.showButton.Name = "showButton";
+            this.showButton.Size = new System.Drawing.Size(93, 23);
+            this.showButton.TabIndex = 0;
+            this.showButton.Text = "Show a picture";
+            this.showButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // clearButton
             // 
-            this.button2.AutoSize = true;
-            this.button2.Location = new System.Drawing.Point(102, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Clear the picture";
-            this.button2.UseVisualStyleBackColor = true;
+            this.clearButton.AutoSize = true;
+            this.clearButton.Location = new System.Drawing.Point(102, 3);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(94, 23);
+            this.clearButton.TabIndex = 1;
+            this.clearButton.Text = "Clear the picture";
+            this.clearButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // backgroundButton
             // 
-            this.button3.AutoSize = true;
-            this.button3.Location = new System.Drawing.Point(202, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Set the background color";
-            this.button3.UseVisualStyleBackColor = true;
+            this.backgroundButton.AutoSize = true;
+            this.backgroundButton.Location = new System.Drawing.Point(202, 3);
+            this.backgroundButton.Name = "backgroundButton";
+            this.backgroundButton.Size = new System.Drawing.Size(137, 23);
+            this.backgroundButton.TabIndex = 2;
+            this.backgroundButton.Text = "Set the background color";
+            this.backgroundButton.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // closeButton
             // 
-            this.button4.AutoSize = true;
-            this.button4.Location = new System.Drawing.Point(345, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Close";
-            this.button4.UseVisualStyleBackColor = true;
+            this.closeButton.AutoSize = true;
+            this.closeButton.Location = new System.Drawing.Point(345, 3);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(75, 23);
+            this.closeButton.TabIndex = 3;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -154,10 +155,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button showButton;
+        private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button backgroundButton;
+        private System.Windows.Forms.Button closeButton;
     }
 }
 
